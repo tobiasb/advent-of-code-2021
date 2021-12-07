@@ -13,6 +13,6 @@ with open(sys.argv[1], 'r') as f:
             pos_y += amount
         if dir == 'forward':
             pos_x += amount
-    
+
     print(f'Depth: {pos_y}, horizontal position: {pos_x}')
     print(f'Final depth * horizontal position: {pos_y*pos_x}')

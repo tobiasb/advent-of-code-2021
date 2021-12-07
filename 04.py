@@ -11,7 +11,7 @@ with open('04_puzzle_input.txt', 'r') as f:
         card = []
         for _ in range(0, 5):
             card.append(f.readline().strip().replace('  ', ' ').split(' '))
-        
+
         print(card)
         cards.append(card)
         if not f.readline():
@@ -46,10 +46,10 @@ for picked_val in numbers:
             unmarked = 0
             for row in card:
                 print(row)
-                unmarked += sum([ int(val) for val in row if val != 'x' ])
+                unmarked += sum([int(val) for val in row if val != 'x'])
             print(f'Sum unmarked: {unmarked}, last number: {picked_val}')
             print(unmarked * int(picked_val))
             cards_done.append(card)
-        
+
         if len(cards_done) == len(cards):
             exit
